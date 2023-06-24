@@ -1,0 +1,198 @@
+/* En este archivo escriban su CSS */
+
+/* Esta es otra manera de importar el tipo de letra desde google fonts sin tener que usar la etiqueta <link> en el documento HTML*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap'); */
+
+/* Fonts */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+  box-shadow: inset 0px 0px 20px 15px #9C27B0;
+  background: url(../img/fondo.jpg)center center/cover no-repeat;
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Para que el scrolleo en la one page sea suave */
+  scroll-behavior: smooth;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+  box-shadow: inset 0px 0px 20px 15px #9C27B0;
+  justify-content: space-around;
+  max-width: 100%;
+  height: 120px;
+}
+
+.encabezado-izq {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  height: 140px;
+}
+
+.header-right {
+  display: flex;
+  flex: 1;
+  padding: 0px;
+}
+.header-right H2:first-child {
+  margin: 20px;
+}
+li.menu:hover,
+li.menu.active,
+a.btn.hover {
+  background: #a8a8c5;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+
+}
+/* para que no queden los enlaces justo uno al lado del otro */
+
+.fachada {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+
+#foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+article {
+  text-align: justify;
+  margin: 1px;
+  padding: 20px;
+  justify-content: center;
+}
+
+#cv {
+  margin: 10px auto 115px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 210px;
+  background-color: rgba(255, 0, 204, 0.5);
+  border-radius: 15px;
+}
+
+#charla {
+  margin: 0 40px;
+  height: auto;
+  width: 90%;
+  justify-content: center;
+  background-color: rgba(255, 0, 204, 0.4);
+  border-radius: 15px;
+}
+
+.git,
+.linkedIn,
+.correo {
+  height: 60px;
+  width: 60px;
+}
+
+#contactame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactame li {
+  float: left;
+  margin: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: rgb(175, 89, 158, 0.6);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Para quitar los puntos a los items de listas */
+li {
+  list-style: none;
+}
+
+/* mobile */
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #fachada {
+    flex: 1;
+  }
+
+  #presentacion {
+    flex: 2;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
